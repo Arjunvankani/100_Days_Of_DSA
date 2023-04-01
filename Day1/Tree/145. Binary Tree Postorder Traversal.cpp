@@ -1,9 +1,10 @@
 class Solution {
     void dfs(TreeNode* root, vector<int>& vec){
-		if(!root) return;
+		if(!root) return;	
+		
 		dfs(root->left,vec);
-		vec.push_back(root->val);
 		dfs(root->right,vec);
+		vec.push_back(root->val);
 	}
 public:
     vector<int> inorderTraversal(TreeNode* root) {
